@@ -19,12 +19,7 @@ def Play():
     if(len(ch) == 0):
         windows.res.setText("Veuillez introduire une chaine")
     else:
-        miniscule = 1
-        for i in ch:
-            if(i > 'z' or i < 'a'):
-                miniscule = 0
-                break
-        if(miniscule):
+        if( ch.islower()):
             windows.res.setText("La chaine cryptée est : "+Miroir(Rotation(ch)))
         else:
             windows.res.setText("Veuillez introduire une chaine valide !")
